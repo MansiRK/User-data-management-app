@@ -22,7 +22,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:deply": "env-cmd -f .env npm run build && firebase deploy -P user-data-management-app"
+    "build:deploy": "env-cmd -f .env npm run build && firebase deploy -P user-data-management-app"
   },
   "eslintConfig": {
     "extends": [
