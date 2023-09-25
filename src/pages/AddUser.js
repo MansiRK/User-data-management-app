@@ -163,14 +163,20 @@ const AddUser = () => {
           <label htmlFor="city" className="form-label">
             City
           </label>
-          <input
+          <select className="form-select" aria-label="select">
+            <option selected>Select your city</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+          {/* <input
             className="form-control"
             type="text"
             name="city"
             value={city || ""}
             placeholder="Mumbai"
             onChange={handleInputChange}
-          />
+          /> */}
 
           <label htmlFor="country" className="form-label">
             Country
