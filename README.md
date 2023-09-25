@@ -42,10 +42,10 @@ To run this application locally, follow these steps:
 
 ## Usage
 
-Create a new user record by clicking on the "Add User" button and filling out the required details.
+Create a new user record by clicking on the "Add User" tab and filling out the required details.
 
-Access user data by navigating to the "View Users" section.
+Access user data by clicking on "View" button.
 
-Edit user information by clicking on the "Update" button next to a user's record.
+Edit user information by clicking on the "Edit" button next to a user's record.
 
 Delete a user record by clicking on the "Delete" button for that user.
