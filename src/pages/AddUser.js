@@ -17,6 +17,7 @@ const initalState = {
 
 const AddUser = () => {
   const [state, setState] = useState(initalState);
+  // eslint-disable-next-line
   const [data, setData] = useState();
   const { name, email, age, phone, gender, city, country } = state;
   const navigate = useNavigate();
