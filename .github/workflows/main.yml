@@ -1,4 +1,5 @@
 name: Firebase Deployment
+
 on:
   push:
     branches:
@@ -39,3 +40,6 @@ jobs:
           args: deploy --only hosting
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          PROJECT_DIR: ./build  
+      - name: Navigate to Project Directory
+        run: cd $PROJECT_DIR 
