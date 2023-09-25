@@ -151,14 +151,38 @@ const AddUser = () => {
           <label htmlFor="gender" className="form-label">
             Gender
           </label>
-          <input
+
+          <div className="form-check ">
+            <input
+              className="form-check-input"
+              type="radio"
+              name="gender"
+              value="Male"
+              checked={gender === "Male"}
+              onChange={handleInputChange}
+            />
+            <label className="form-check-label">Male</label>
+          </div>
+          <div className="form-check ">
+            <input
+              className="form-check-input"
+              type="radio"
+              name="gender"
+              value="Female"
+              checked={gender === "Female"}
+              onChange={handleInputChange}
+            />
+            <label className="form-check-label">Female</label>
+          </div>
+
+          {/* <input
             className="form-control"
             type="text"
             name="gender"
             value={gender || ""}
             placeholder="Male"
             onChange={handleInputChange}
-          />
+          /> */}
 
           {/* <label htmlFor="city" className="form-label">
             City
