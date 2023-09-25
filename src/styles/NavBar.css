@@ -20,9 +20,6 @@
     font-size: 30px;
     font-weight: 700;
     color: white;
-}
-
-.navbar .navbar-container .navbar-brand:hover {
     text-shadow: 2px 2px rgb(241, 115, 48);
 }
 
