@@ -160,7 +160,7 @@ const AddUser = () => {
             onChange={handleInputChange}
           />
 
-          <label htmlFor="city" className="form-label">
+          {/* <label htmlFor="city" className="form-label">
             City
           </label>
           <select className="form-select" aria-label="select">
@@ -169,14 +169,14 @@ const AddUser = () => {
             <option value="2">Two</option>
             <option value="3">Three</option>
           </select>
-          {/* <input
+           <input
             className="form-control"
             type="text"
             name="city"
             value={city || ""}
             placeholder="Mumbai"
             onChange={handleInputChange}
-          /> */}
+          /> 
 
           <label htmlFor="country" className="form-label">
             Country
@@ -188,7 +188,44 @@ const AddUser = () => {
             value={country || ""}
             placeholder="India"
             onChange={handleInputChange}
-          />
+          /> */}
+
+          <label htmlFor="city" className="form-label">
+            City
+          </label>
+          <select
+            className="form-select"
+            name="city" // Add the 'name' attribute
+            value={city || ""}
+            onChange={handleInputChange}
+          >
+            <option value="" disabled>
+              Select your city
+            </option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Bangalore">Bangalore</option>
+            {/* Add more city options as needed */}
+          </select>
+
+          <label htmlFor="country" className="form-label">
+            Country
+          </label>
+          <select
+            className="form-select"
+            name="country" // Add the 'name' attribute
+            value={country || ""}
+            onChange={handleInputChange}
+          >
+            <option value="" disabled>
+              Select your country
+            </option>
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            {/* Add more country options as needed */}
+          </select>
+
           <div className="btn-contain">
             <button className="btn btn-add">{heading}</button>
             <Toaster />

@@ -132,4 +132,4 @@ dist
 .pnp.*
 
 # Exclude firebase.json
-/firebase.json
+# /firebase.json
