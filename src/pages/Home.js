@@ -6,8 +6,10 @@ import toast, { Toaster } from "react-hot-toast";
 import { Link } from "react-router-dom";
 
 const Home = () => {
+  // Initialize state to store user data
   const [data, setData] = useState({});
 
+  // Fetch user data from Firebase database on component mount
   useEffect(() => {
     const userRef = ref(database, "users");
 
@@ -29,13 +31,14 @@ const Home = () => {
     };
   }, []);
 
+  // Function to handle user data deletion
   const handleDelete = (id) => {
     if (window.confirm("Delete this user data?")) {
       const userRef = ref(database, `users/${id}`);
 
       try {
         remove(userRef).then(() => {
-          // Data successfully deleted, update the state
+          // Data successfully deleted, update the state to reflect the change
           const updatedData = { ...data };
           delete updatedData[id];
           setData(updatedData);
@@ -89,12 +92,15 @@ const Home = () => {
                     <td>{data[id].country}</td>
                     <td>
                       <div className="btn-contain">
+                        {/* Link to view user data */}
                         <Link to={`/user/data/${id}`} className="btn btn-view">
                           View
                         </Link>
+                        {/* Link to edit user data */}
                         <Link to={`/user/edit/${id}`} className="btn btn-edit">
                           Edit
                         </Link>
+                        {/* Button to delete user data */}
                         <Link
                           className="btn btn-delete"
                           onClick={() => handleDelete(id)}

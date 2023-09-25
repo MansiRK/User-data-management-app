@@ -35,9 +35,7 @@ form .form-control,
 form .form-check {
     display: inline-flex;
     flex-direction: row;
-    /* Display the radio buttons horizontally */
     justify-content: center;
-    /* Add space between the radio buttons */
     align-items: center;
     margin-left: 30px;
     padding-right: 30px;
@@ -45,7 +43,6 @@ form .form-check {
 
 form .form-check .form-check-input {
     margin-right: 20px;
-    /* Add some spacing between radio buttons */
 }
 
 form .form-control:hover,
@@ -59,21 +56,6 @@ form .form-select {
     padding-left: 20px;
     outline: none;
     box-shadow: none;
-}
-
-select.form-select option {
-    /* Define the default background color for options */
-    /* background-color: rgb(244, 215, 215); */
-    color: rgb(27, 10, 10);
-    /* Text color */
-}
-
-/* Style for the select options when hovering */
-select.form-select option:hover {
-    background-color: rgba(92, 33, 33, 0.933) !important;
-    /* Change the background color on hover */
-    color: white;
-    /* Change the text color on hover */
 }
 
 .btn-contain {

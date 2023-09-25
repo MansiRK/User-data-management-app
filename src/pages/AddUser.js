@@ -16,6 +16,7 @@ const initalState = {
 };
 
 const AddUser = () => {
+  // Initialize state with default values, including "Male" as the default gender
   const [state, setState] = useState({ ...initalState, gender: "Male" });
 
   // eslint-disable-next-line
@@ -37,7 +38,7 @@ const AddUser = () => {
           setData(userData);
 
           if (id) {
-            setState({ ...userData[id] });
+            setState({ ...userData[id] }); // Set form fields with user data when updating
           }
         } else {
           setData({});
@@ -56,7 +57,7 @@ const AddUser = () => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setState({ ...state, [name]: value });
+    setState({ ...state, [name]: value }); // Update the state when input fields change
   };
 
   const handleSubmit = async (e) => {
@@ -83,7 +84,7 @@ const AddUser = () => {
         try {
           await push(userRef, state);
           toast.success("User details added successfully");
-          setState(initalState);
+          setState(initalState); // Clear form fields after adding a user
 
           setTimeout(() => {
             navigate("/");
@@ -153,13 +154,14 @@ const AddUser = () => {
             Gender
           </label>
 
+          {/* Radio buttons for gender */}
           <div className="form-check ">
             <input
               className="form-check-input"
               type="radio"
               name="gender"
               value="Male"
-              checked={gender === "Male"}
+              checked={gender === "Male"} // Check if gender is Male
               onChange={handleInputChange}
             />
             <label className="form-check-label">Male</label>
@@ -170,12 +172,13 @@ const AddUser = () => {
               type="radio"
               name="gender"
               value="Female"
-              checked={gender === "Female"}
+              checked={gender === "Female"} // Check if gender is Female
               onChange={handleInputChange}
             />
             <label className="form-check-label">Female</label>
           </div>
 
+          {/* Select input for City */}
           <label htmlFor="city" className="form-label">
             City
           </label>
@@ -197,6 +200,7 @@ const AddUser = () => {
             <option value="Surat">Surat</option>
           </select>
 
+          {/* Select input for Country */}
           <label htmlFor="country" className="form-label">
             Country
           </label>
@@ -207,9 +211,10 @@ const AddUser = () => {
             onChange={handleInputChange}
           >
             <option value="" disabled>
-              Select You Country
+              Select Your Country
             </option>
             <option value="India">India</option>
+            {/* Add more country options as needed */}
           </select>
 
           <div className="btn-contain">

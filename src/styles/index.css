@@ -10,7 +10,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* overflow: hidden; */
 }
 
 h4 {
@@ -44,6 +43,8 @@ h4 {
     margin: 0 auto;
   }
 }
+
+/* Importing other css files */
 
 @import url("./NavBar.css");
 @import url("./Home.css");

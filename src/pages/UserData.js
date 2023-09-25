@@ -5,9 +5,11 @@ import { ref, get } from "firebase/database";
 import { useParams, Link } from "react-router-dom";
 
 const UserData = () => {
+  // Initialize state to store user data
   const [user, setUser] = useState({});
-  const { id } = useParams();
+  const { id } = useParams(); // Get the user ID from the route params
 
+  // Fetch user data from Firebase database on component mount
   useEffect(() => {
     const userRef = ref(database, `users/${id}`);
 
@@ -37,6 +39,7 @@ const UserData = () => {
             <h5>Data of User: {user.name}</h5>
           </div>
           <div className="card-body">
+            {/* Display user details */}
             <h6>
               Name: <span>{user.name}</span>
             </h6>
@@ -70,6 +73,7 @@ const UserData = () => {
               Country: <span>{user.country}</span>
             </h6>
 
+            {/* Button to navigate back to the home page */}
             <div className="btn-contain">
               <Link to={`/`} className="btn btn-back">
                 Go Back
