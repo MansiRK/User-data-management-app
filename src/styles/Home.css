@@ -5,16 +5,28 @@
 
 .home .table-container {
     padding: 20px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
     overflow: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* Enable scrolling for the .table-container */
+    width: 100%;
+    /* Ensure the container takes full width */
+    /* height: 100%; */
+    /* Ensure the container takes full height */
+    box-sizing: border-box;
 }
 
 table {
     min-width: 800px;
-    overflow: auto;
+    width: 100%;
+    /* Ensure the table takes full width */
+    /* table-layout: fixed; */
+    /* Use a fixed layout to ensure consistent column widths */
+    border-collapse: collapse;
+    /* Collapse borders for consistent styling */
+    border: 1px solid rgb(173, 9, 9);
 }
 
 table::-webkit-scrollbar {
