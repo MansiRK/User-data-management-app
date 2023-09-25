@@ -16,7 +16,8 @@ const initalState = {
 };
 
 const AddUser = () => {
-  const [state, setState] = useState(initalState);
+  const [state, setState] = useState({ ...initalState, gender: "Male" });
+
   // eslint-disable-next-line
   const [data, setData] = useState();
   const { name, email, age, phone, gender, city, country } = state;
@@ -175,61 +176,25 @@ const AddUser = () => {
             <label className="form-check-label">Female</label>
           </div>
 
-          {/* <input
-            className="form-control"
-            type="text"
-            name="gender"
-            value={gender || ""}
-            placeholder="Male"
-            onChange={handleInputChange}
-          /> */}
-
-          {/* <label htmlFor="city" className="form-label">
-            City
-          </label>
-          <select className="form-select" aria-label="select">
-            <option selected>Select your city</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
-           <input
-            className="form-control"
-            type="text"
-            name="city"
-            value={city || ""}
-            placeholder="Mumbai"
-            onChange={handleInputChange}
-          /> 
-
-          <label htmlFor="country" className="form-label">
-            Country
-          </label>
-          <input
-            className="form-control"
-            type="text"
-            name="country"
-            value={country || ""}
-            placeholder="India"
-            onChange={handleInputChange}
-          /> */}
-
           <label htmlFor="city" className="form-label">
             City
           </label>
           <select
             className="form-select"
-            name="city" // Add the 'name' attribute
+            name="city"
             value={city || ""}
             onChange={handleInputChange}
           >
             <option value="" disabled>
-              Select your city
+              Select Your City
             </option>
             <option value="Mumbai">Mumbai</option>
             <option value="Delhi">Delhi</option>
             <option value="Bangalore">Bangalore</option>
-            {/* Add more city options as needed */}
+            <option value="Chennai">Chennai</option>
+            <option value="Kolkata">Kolkata</option>
+            <option value="Jaipur">Jaipur</option>
+            <option value="Surat">Surat</option>
           </select>
 
           <label htmlFor="country" className="form-label">
@@ -237,17 +202,14 @@ const AddUser = () => {
           </label>
           <select
             className="form-select"
-            name="country" // Add the 'name' attribute
+            name="country"
             value={country || ""}
             onChange={handleInputChange}
           >
             <option value="" disabled>
-              Select your country
+              Select You Country
             </option>
             <option value="India">India</option>
-            <option value="USA">USA</option>
-            <option value="Canada">Canada</option>
-            {/* Add more country options as needed */}
           </select>
 
           <div className="btn-contain">
