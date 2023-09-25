@@ -7,13 +7,12 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        {/* <ToastContainer> */}
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/user/add" element={<AddUser />} />
-          <Route exact path="/user/data" element={<UserData />} />
+          <Route exact path="/user/edit/:id" element={<AddUser />} />
+          <Route exact path="/user/data/:id" element={<UserData />} />
         </Routes>
-        {/* </ToastContainer> */}
       </div>
     </BrowserRouter>
   );

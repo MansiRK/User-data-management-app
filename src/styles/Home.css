@@ -1,0 +1,71 @@
+.home {
+    width: 85%;
+    height: 100vh;
+}
+
+.home .table-container {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+table {
+    min-width: 800px;
+    overflow: auto;
+}
+
+table::-webkit-scrollbar {
+    display: none;
+}
+
+.user-table thead tr th {
+    background-color: rgb(241, 115, 48);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.user-table tbody tr td {
+    padding: 2;
+    font-size: 15px;
+    text-align: center;
+}
+
+.btn-edit {
+    background-color: rgb(5, 5, 63);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    margin: 0 5px;
+    font-weight: 600;
+}
+
+.btn-view {
+    background-color: rgb(95, 197, 200);
+    color: rgb(249, 249, 249);
+    border: none;
+    border-radius: 50px;
+    margin: 0 5px;
+    font-weight: 600;
+}
+
+.btn-delete {
+    background-color: rgb(155, 3, 3);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    margin: 0 5px;
+    font-weight: 600;
+}
+
+.btn-view:hover,
+.btn-delete:hover,
+.btn-edit:hover {
+    background-color: rgb(236, 82, 22);
+    color: rgb(0, 0, 0);
+    border-radius: 50px;
+    font-weight: 600;
+    margin: 0 5px;
+}

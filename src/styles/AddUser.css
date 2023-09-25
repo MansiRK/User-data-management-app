@@ -1,0 +1,57 @@
+.add-user {
+    width: 85%;
+    height: 100vh;
+    padding: 0;
+}
+
+form {
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+form .form-label {
+    margin: 15px 10px 5px 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+form .form-control {
+    border-radius: 50px;
+    border-color: rgb(8, 8, 50);
+    padding-left: 20px;
+    outline: none;
+    box-shadow: none;
+}
+
+.form-control:focus {
+    border-color: inherit;
+    box-shadow: none;
+    outline: none;
+}
+
+form .form-control:hover {
+    border: 0.5px solid rgb(241, 115, 48);
+}
+
+.btn-contain {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-contain .btn-add {
+    border-radius: 50px;
+    background-color: rgb(8, 8, 50);
+    color: white;
+    height: 45px;
+    width: 150px;
+    font-size: 18px;
+    margin-top: 25px;
+}
+
+.btn-contain .btn-add:hover {
+    background-color: rgb(241, 115, 48);
+    color: rgb(8, 8, 50);
+    font-weight: 600;
+}

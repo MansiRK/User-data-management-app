@@ -1,0 +1,42 @@
+.navbar {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgb(8, 8, 50);
+}
+
+.navbar .navbar-container {
+    width: 85%;
+    background-color: rgb(8, 8, 50);
+}
+
+.navbar .navbar-container .navbar-toggler-icon {
+    background-color: rgb(218, 218, 218);
+    border-radius: 5px;
+}
+
+.navbar .navbar-container .navbar-brand {
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}
+
+.navbar .navbar-container .navbar-brand:hover {
+    text-shadow: 2px 2px rgb(241, 115, 48);
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+    color: rgb(254, 253, 253);
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 30px;
+
+}
+
+.navbar .navbar-nav .nav-item .nav-link.active,
+.navbar .navbar-nav .nav-item .nav-link:hover {
+    color: rgb(241, 115, 48);
+    border-bottom: 3px solid rgb(241, 115, 48);
+    transition: width 0.5s ease;
+}
